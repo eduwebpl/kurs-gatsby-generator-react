@@ -2,6 +2,9 @@ var plugins = [{
       plugin: require('/Users/adamromanski/eduweb/KURS – Gatsby/code/02/hatta-website/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      plugin: require('/Users/adamromanski/eduweb/KURS – Gatsby/code/02/hatta-website/node_modules/gatsby-plugin-layout/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/Users/adamromanski/eduweb/KURS – Gatsby/code/02/hatta-website/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
     },{

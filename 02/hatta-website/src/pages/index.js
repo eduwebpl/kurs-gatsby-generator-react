@@ -5,8 +5,7 @@ import Navigation from "../components/Navigation/Navigation";
 
 const IndexPage = () => (
   <>
-    <Navigation />
-    <Link to="/page-2/">Go to page 2</Link>
+    <h1>Hello Hatta</h1>
   </>
 )
 
