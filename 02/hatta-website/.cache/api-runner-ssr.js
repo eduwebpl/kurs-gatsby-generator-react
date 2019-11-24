@@ -4,6 +4,9 @@ var plugins = [{
     },{
       plugin: require('/Users/adamromanski/eduweb/KURS – Gatsby/code/02/hatta-website/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      plugin: require('/Users/adamromanski/eduweb/KURS – Gatsby/code/02/hatta-website/node_modules/gatsby-plugin-prefetch-google-fonts/gatsby-ssr'),
+      options: {"plugins":[],"fonts":[{"family":"Montserrat","variants":["400","600","700"]}]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
