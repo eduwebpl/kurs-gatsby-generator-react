@@ -5,7 +5,7 @@ const query = graphql`
 {
   site {
     siteMetadata {
-      title
+      description
     }
   }
 }
@@ -14,7 +14,7 @@ const query = graphql`
 const Post = () => {
   const data = useStaticQuery(query);
 
-  return <p>{data.site.siteMetadata.title}</p>;
+  return <p>{data.site.siteMetadata.description}</p>;
 };
 
 export default Post;
