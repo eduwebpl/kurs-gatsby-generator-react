@@ -6,7 +6,7 @@ const PreviewWrapper = styled.div`
   width: 100%;
   height: 340px;
   background-color: hsl(0, 0%, 95%);
-  background-image: url('https://unsplash.it/701/410');
+  background-image: url(${({background}) => background});
   background-size: cover;
 `;
 
@@ -26,8 +26,8 @@ const PreviewInfoLabel = styled.div`
   }
 `;
 
-const Preview = ({ title, excerpt }) => (
-  <PreviewWrapper>
+const Preview = ({ title, excerpt, background }) => (
+  <PreviewWrapper background={background}>
     <PreviewInfoLabel>
       <h2>{title}</h2>
       <p>{excerpt}</p>
