@@ -8,18 +8,8 @@ exports.createPages = async ({ graphql, actions }) => {
       allMdx {
         nodes {
           frontmatter {
-            title
             slug
-            author
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 700, maxHeight: 500) {
-                  src
-                }
-              }
-            }
           }
-          excerpt(pruneLength: 50)
         }
       }
     }
@@ -27,9 +17,11 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allMdx.nodes.forEach(post => {
     createPage({
-      path: `${post.frontmatter.slug}`,
+      path: `articles/${post.frontmatter.slug}`,
       component: blogPostTemplate,
-      context: {},
+      context: {
+        slug: post.frontmatter.slug,
+      },
     });
   });
 };
