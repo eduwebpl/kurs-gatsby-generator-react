@@ -8,6 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
     query queryCMSPage {
       allDatoCmsArticle {
         nodes {
+          id
           title
         }
       }
@@ -18,13 +19,12 @@ exports.createPages = async ({ graphql, actions }) => {
     const slugifiedTitle = slugify(post.title, {
       lower: true
     });
-    console.log(slugifiedTitle);
 
     createPage({
       path: `articles/${slugifiedTitle}`,
       component: blogPostTemplate,
       context: {
-        slug: slugifiedTitle,
+        id: post.id,
       },
     });
   });

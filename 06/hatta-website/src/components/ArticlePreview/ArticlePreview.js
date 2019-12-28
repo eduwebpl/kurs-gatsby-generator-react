@@ -38,7 +38,6 @@ const Preview = ({ title, excerpt, image, slug }) => (
     <StyledImage fluid={image} />
     <PreviewInfoLabel>
       <h2>{title}</h2>
-      <p>{excerpt}</p>
     </PreviewInfoLabel>
   </PreviewWrapper>
 );
